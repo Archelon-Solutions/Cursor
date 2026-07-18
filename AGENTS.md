@@ -15,6 +15,8 @@
 | Maintain project knowledge | `wiki-maintain` skill → `docs/wiki/index.md` |
 | Write or fix README/docs | `readme-optimize` skill |
 | Bootstrap a new project | `project-bootstrap` skill |
+| Minimal / lazy code (YAGNI) | `ponytail` skill + `ponytail` rule (always-on) |
+| Review for over-engineering | `ponytail-review` or `ponytail-audit` skill |
 | Deep reference on any topic | `.cursor/reference/` (load on demand) |
 
 ## This repo

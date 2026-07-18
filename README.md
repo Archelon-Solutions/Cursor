@@ -10,8 +10,9 @@ Personal Cursor configuration for **Archelon Solutions** — rules, skills, refe
 | **User Rules template** | `user-rules/GLOBAL-USER-RULES.md` | Copy to Cursor Settings → User Rules |
 | **Global install script** | `setup/install-global.sh` | One-command account-wide setup |
 | **Agent entry point** | `AGENTS.md` | Thin routing table for agents |
-| **Rules** | `.cursor/rules/*.mdc` | Scoped instructions (1 always-on + 4 on-demand) |
-| **Skills** | `.cursor/skills/*/SKILL.md` | On-demand workflows (6 skills) |
+| **Rules** | `.cursor/rules/*.mdc` | Scoped instructions (2 always-on + 4 on-demand) |
+| **Skills** | `.cursor/skills/*/SKILL.md` | On-demand workflows (12 skills incl. Ponytail) |
+| **Ponytail install** | `setup/install-ponytail.sh` | Standalone Ponytail global install |
 | **Reference** | `.cursor/reference/*.md` | Deep docs loaded lazily (5 references) |
 | **Setup guide** | `setup/INSTALL.md` | How to add to your Cursor account |
 
@@ -25,6 +26,11 @@ Personal Cursor configuration for **Archelon Solutions** — rules, skills, refe
 | `readme-optimize` | AI-optimized README and AGENTS.md structure |
 | `model-orchestrate` | Advisor → executor → reviewer model routing |
 | `project-bootstrap` | Copy config into new projects |
+| `ponytail` | Lazy senior dev mode — YAGNI, minimal code ([source](https://github.com/DietrichGebert/ponytail)) |
+| `ponytail-review` | Review diff for over-engineering |
+| `ponytail-audit` | Whole-repo bloat audit |
+| `ponytail-debt` | Track deferred `ponytail:` shortcuts |
+| `ponytail-help` | Ponytail command reference |
 
 ## Key patterns
 

@@ -51,8 +51,8 @@ Open **Customize** (sidebar):
 
 | Tab | What you should see |
 |-----|-------------------|
-| **Rules** | `companion` (Always) + token-optimization, model-orchestration, development-standards, documentation |
-| **Skills** | plan-then-build, token-audit, wiki-maintain, readme-optimize, model-orchestrate, project-bootstrap |
+| **Rules** | `companion` (Always) + `ponytail` (Always) + token-optimization, model-orchestration, development-standards, documentation |
+| **Skills** | plan-then-build, token-audit, wiki-maintain, readme-optimize, model-orchestrate, project-bootstrap, ponytail (+ 5 ponytail variants) |
 
 Filter by **User** scope to confirm they're global, not project-only.
 
@@ -65,13 +65,26 @@ Filter by **User** scope to confirm they're global, not project-only.
 
 User Rules are plain text and sync with your Cursor account. They complement the plugin's file-based rules.
 
+### Ponytail (included)
+
+[Ponytail](https://github.com/DietrichGebert/ponytail) is bundled — lazy senior dev mode (YAGNI, stdlib first, minimal code).
+
+- **Rule:** `ponytail.mdc` (Always)
+- **Skills:** `ponytail`, `ponytail-review`, `ponytail-audit`, `ponytail-debt`, `ponytail-gain`, `ponytail-help`
+
+Standalone install without the full hub:
+
+```bash
+./setup/install-ponytail.sh
+```
+
 ---
 
 ## What you get in every project
 
-### Always active (via plugin rule: `companion`)
-- Production-first, minimal scope, token-aware defaults
-- Plan before build; wiki over re-read; pointers not paste
+### Always active (via plugin rules)
+- `companion`: production-first, minimal scope, token-aware defaults
+- `ponytail`: lazy senior dev — YAGNI ladder, stdlib first, no unnecessary deps
 
 ### On-demand (via plugin skills — agent loads when relevant)
 | Skill | Triggers on |
@@ -82,6 +95,11 @@ User Rules are plain text and sync with your Cursor account. They complement the
 | `readme-optimize` | README, onboarding docs |
 | `model-orchestrate` | model selection, advisor, orchestrator |
 | `project-bootstrap` | new project, setup .cursor |
+| `ponytail` | yagni, lazy mode, simplest solution, minimal code |
+| `ponytail-review` | review diff for over-engineering |
+| `ponytail-audit` | whole-repo bloat audit |
+| `ponytail-debt` | harvest deferred shortcuts |
+| `ponytail-help` | ponytail reference |
 
 ### Per-project (optional, when you want project-specific wiki)
 Run in any project: *"Use wiki-maintain skill to initialize docs/wiki/"*

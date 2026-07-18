@@ -7,6 +7,7 @@ Thin entry point for agents. Load deep content on demand — never inline refere
 | File | Activation | Purpose |
 |------|-----------|---------|
 | `companion.mdc` | alwaysApply | Session-wide stance (< 200 words) |
+| `ponytail.mdc` | alwaysApply | Lazy senior dev — YAGNI, stdlib first, minimal code ([source](https://github.com/DietrichGebert/ponytail)) |
 | `token-optimization.mdc` | agent-requested | Token and context efficiency |
 | `model-orchestration.mdc` | agent-requested | Advisor → executor model routing |
 | `development-standards.mdc` | agent-requested | Cross-project dev standards |
@@ -22,6 +23,12 @@ Thin entry point for agents. Load deep content on demand — never inline refere
 | `readme-optimize` | README, onboarding docs, AGENTS.md |
 | `model-orchestrate` | model selection, advisor, orchestrator |
 | `project-bootstrap` | new project, setup .cursor, onboarding |
+| `ponytail` | lazy mode, yagni, simplest solution, minimal code |
+| `ponytail-review` | review diff for over-engineering |
+| `ponytail-audit` | audit whole repo for bloat |
+| `ponytail-debt` | harvest deferred `ponytail:` shortcuts |
+| `ponytail-gain` | benchmark impact scoreboard |
+| `ponytail-help` | ponytail command reference |
 
 ## Reference (`.cursor/reference/`)
 

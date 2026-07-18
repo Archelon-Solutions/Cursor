@@ -1,7 +1,7 @@
 {
   "name": "archelon-dev-hub",
   "description": "Global development standards, token optimization, model orchestration, and LLM-wiki workflows for all projects.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": {
     "name": "Archelon Solutions",
     "email": "archelonsolutions@gmail.com"
@@ -12,7 +12,8 @@
     "token-optimization",
     "model-orchestration",
     "llm-wiki",
-    "plan-mode"
+    "plan-mode",
+    "ponytail"
   ],
   "rules": ".cursor/rules",
   "skills": ".cursor/skills"
