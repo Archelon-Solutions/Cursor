@@ -1,0 +1,32 @@
+---
+description: Token and context-window efficiency — rules scoping, chat hygiene, MCP pruning, and @-mention strategy. Load when optimizing cost, context, or agent performance.
+alwaysApply: false
+---
+
+# Token optimization
+
+## Rules budget
+- Keep all `alwaysApply: true` rules under ~2,000 tokens combined.
+- One concern per `.mdc` file. Use `globs` for file-type rules.
+- Never paste style guides — use linters and link to `.cursor/reference/`.
+
+## Chat hygiene
+- **One task = one chat.** Long threads re-send history and degrade focus.
+- Use `@Past Chats` to pull selective context into a fresh session.
+- Revert and re-plan instead of debugging a confused multi-turn thread.
+
+## Context selection
+- `@file` when you know the answer lives there; `@folder` for structure; let the agent search when unsure.
+- Attach 2–4 files max unless the task truly needs more.
+- Disable unused MCP servers — their tool schemas load every Agent turn.
+
+## LLM-as-wiki
+- Compile knowledge once into `docs/wiki/index.md` + topic pages.
+- On code changes, update only affected wiki pages (surgical diffs).
+- See `.cursor/reference/llm-wiki-pattern.md` and the `wiki-maintain` skill.
+
+## Audit checklist
+1. Dashboard → Usage: identify expensive sessions.
+2. Trim always-on rules and Memories.
+3. Scope rules with globs; move workflows to Skills.
+4. Use Auto/Composer for routine work; frontier models for plan/review only.

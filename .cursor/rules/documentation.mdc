@@ -1,0 +1,24 @@
+---
+description: Markdown and documentation conventions for READMEs, wikis, and AI-friendly docs.
+globs: "**/*.md,**/*.mdx,docs/**"
+alwaysApply: false
+---
+
+# Documentation rules
+
+## README structure (AI-optimized)
+1. **One-liner** — what this is (1 sentence).
+2. **Quick start** — install + run in <10 lines.
+3. **Commands table** — build, test, lint, deploy.
+4. **Architecture pointer** — link to `docs/wiki/` or `ARCHITECTURE.md`, don't inline.
+5. **Contributing** — branch naming, PR expectations.
+
+## Wiki pages
+- YAML frontmatter: `title`, `tags`, `updated`, `sources`.
+- One topic per page; cross-link with relative markdown links.
+- Keep `docs/wiki/index.md` as the navigation catalog (one-line summary per page).
+
+## Anti-patterns
+- Do not duplicate the same instructions in README, AGENTS.md, and rules.
+- Do not paste API docs — link to OpenAPI/GraphQL schema files.
+- Do not exceed 500 lines in any single doc loaded by agents routinely.

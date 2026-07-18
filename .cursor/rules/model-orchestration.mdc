@@ -1,0 +1,32 @@
+---
+description: Model selection and advisor-orchestrator pattern — plan with thinking models, execute with fast models, multi-model comparison.
+alwaysApply: false
+---
+
+# Model orchestration
+
+## Advisor → executor pattern
+1. **Plan** (thinking model: Opus, GPT-5.x, Sonnet thinking): architecture, trade-offs, file list, success criteria.
+2. **Review plan** (human edits the markdown plan — prune steps, add constraints).
+3. **Execute** (fast model: Composer, Haiku, Auto): implement step-by-step from the locked plan.
+4. **Review** (thinking model, brief): security, edge cases, diff review — then return to fast model for fixes.
+
+## When to use which
+| Phase | Model type | Examples |
+|-------|-----------|----------|
+| Plan / design | Thinking | Opus, GPT-5.x, Sonnet thinking |
+| Implement / iterate | Fast | Composer, Auto, Haiku |
+| Debug subtle logic | Thinking (brief) | then fast to apply fix |
+| Docs / explanations | Verbose reasoner | GPT-5.x |
+| Routine refactor | Auto or Composer | |
+
+## Multi-model comparison
+For ambiguous tasks, run the same prompt on 2–3 models side-by-side. Pick the best plan before spending tokens on implementation.
+
+## Subagents as orchestrators
+- Use larger models as **orchestrators** that delegate focused subtasks to cheaper subagents.
+- Each subagent gets a narrow scope, explicit inputs, and done criteria.
+- See `model-orchestrate` skill and `.cursor/reference/model-selection.md`.
+
+## Save plans
+Click "Save to workspace" in Plan Mode → `.cursor/plans/`. Future agents resume from the plan, not from chat history.

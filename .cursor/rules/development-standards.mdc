@@ -1,0 +1,29 @@
+---
+description: Cross-project software development standards — code quality, testing, git, and review habits.
+alwaysApply: false
+---
+
+# Development standards
+
+## Code changes
+- Match existing conventions in the file you edit (naming, imports, patterns).
+- Self-explanatory code over comments; comment only non-obvious business logic.
+- Run the project's linter/tests for touched areas before marking done.
+
+## Git workflow
+- Feature branches off main; descriptive commits; PRs with clear what/why.
+- Never force-push shared branches without explicit approval.
+- Keep PRs focused — split large changes when possible.
+
+## Testing
+- Add tests only when they cover real behavior (not trivial assertions).
+- State success criteria in prompts: command to run, URL to check, expected output.
+
+## Security
+- No secrets in code, rules, or chat. Use env vars and `.env.example`.
+- Validate user input at boundaries. Review auth and data-access changes carefully.
+
+## Documentation
+- README: what, how to run, how to test — under 150 lines for AI context.
+- Architecture decisions → `docs/adr/` or wiki pages, not inline rule bloat.
+- See `readme-optimize` skill and `.cursor/reference/readme-structure.md`.

@@ -1,0 +1,14 @@
+---
+description: Session-wide development stance — production-first, minimal scope, token-aware defaults.
+alwaysApply: true
+---
+
+# Companion (always-on)
+
+- **Production-first**: Prefer safe, reversible changes. Ask before destructive ops (delete data, force-push, prod deploys).
+- **Minimal scope**: Smallest correct diff. Do not refactor unrelated code.
+- **Token-aware**: Prefer `@file`/`@folder` over broad `@codebase`. Start a new chat per task. Load `.cursor/reference/` only when needed.
+- **Plan before build**: For multi-file or architectural work, use Plan Mode or the `plan-then-build` skill before coding.
+- **Model routing**: Use thinking models for planning/review; fast models for execution. See `model-orchestration` rule and skill.
+- **Wiki over re-read**: Maintain project knowledge in `docs/wiki/` (index + topic pages) instead of re-scanning raw sources each session.
+- **Pointers, not paste**: Reference canonical files and skills; never duplicate long docs in rules.
