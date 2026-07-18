@@ -6,7 +6,9 @@ Personal Cursor configuration for **Archelon Solutions** — rules, skills, refe
 
 | Component | Path | Purpose |
 |-----------|------|---------|
-| **User Rules template** | `user-rules/USER-RULES.md` | Global preferences (copy to Cursor Settings) |
+| **Global plugin** | `.cursor-plugin/plugin.json` | Install to `~/.cursor/plugins/local/` for all projects |
+| **User Rules template** | `user-rules/GLOBAL-USER-RULES.md` | Copy to Cursor Settings → User Rules |
+| **Global install script** | `setup/install-global.sh` | One-command account-wide setup |
 | **Agent entry point** | `AGENTS.md` | Thin routing table for agents |
 | **Rules** | `.cursor/rules/*.mdc` | Scoped instructions (1 always-on + 4 on-demand) |
 | **Skills** | `.cursor/skills/*/SKILL.md` | On-demand workflows (6 skills) |
@@ -42,12 +44,18 @@ Personal Cursor configuration for **Archelon Solutions** — rules, skills, refe
 - Surgical updates on code changes (not full rebuilds)
 - 60–90% token savings on large codebases
 
-## Quick start
+## Quick start — global (every project)
 
-1. **Global setup**: Copy `user-rules/USER-RULES.md` → Cursor Settings → User Rules
-2. **Per project**: Import as Remote Rule from `https://github.com/Archelon-Solutions/Cursor`
-3. **Verify**: Customize → Rules and Skills should show the config
-4. **Details**: See [setup/INSTALL.md](setup/INSTALL.md)
+```bash
+# 1. Install plugin globally (rules + skills for ALL projects)
+git clone https://github.com/Archelon-Solutions/Cursor.git ~/.cursor/plugins/local/archelon-dev-hub
+
+# 2. In Cursor: enable "Include third-party Plugins, Skills, and other configs"
+# 3. Developer → Reload Window
+# 4. Paste user-rules/GLOBAL-USER-RULES.md → Settings → Rules → User Rules
+```
+
+Full guide: [setup/INSTALL.md](setup/INSTALL.md)
 
 ## Architecture
 
